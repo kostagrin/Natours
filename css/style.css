@@ -7,14 +7,26 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
-    font-size: 10px; /* 1rem = 10px*/
+    /* 1rem = 10px. This logic makes it easy to convert all
+    font-sizes to rem units.*/
+    font-size: 10px; 
+       
+    /* Default font-size of a brouser is 16px. 
+    So, in order to keep the root font-sise equal to 10px
+    in dependance of default browser settings,
+    we calculate it in percentages: 10/16*100 = 62.5%.
+    This approach will make it possible for a user to adjust
+    default browser settings to his needs. */
+    font-size: 62.5%; 
 }
 
 body {
@@ -23,7 +35,8 @@ body {
     /* font-size: 1.6rem; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -38,42 +51,43 @@ body {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
-/* .logo:hover {
+/* .header__logo:hover {
     animation: moveInRight 1s ease-out;
     -webkit-animation: moveInRight 1s ease-out;
 } */
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     text-align: center;
-    transform: translate(-50%; -50%);
-    -webkit-transform: translate(-50%);
-    -moz-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    -o-transform: translate(-50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .heading-primary {
     margin-bottom: 6rem;
     color: #fff;
     text-transform: uppercase;
-    backface-visibility: hidden;
+    
     /*fix unwanted element shaking during animation*/
+    backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -82,7 +96,7 @@ body {
     -webkit-animation: moveInRight 1s ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -168,8 +182,7 @@ body {
 }
 
 .btn:hover {
-    /*padding: 16px 41px;
-    */transform: translateY(-.3rem);
+    transform: translateY(-.3rem);
     -webkit-transform: translateY(-.3rem);
     -moz-transform: translateY(-.3rem);
     -ms-transform: translateY(-.3rem);
@@ -178,8 +191,7 @@ body {
 }
 
 .btn:active {
-    /*padding: 14px 39px;
-    */transform: translateY(-.1rem);
+    transform: translateY(-.1rem);
     -webkit-transform: translateY(-.1rem);
     -moz-transform: translateY(-.1rem);
     -ms-transform: translateY(-.1rem);
@@ -187,7 +199,7 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -213,7 +225,7 @@ body {
     -o-transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -229,11 +241,11 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(-3rem);
-        -webkit-transform: translateY(-3rem);
-        -moz-transform: translateY(-3rem);
-        -ms-transform: translateY(-3rem);
-        -o-transform: translateY(-3rem);
+        transform: translateY(3rem);
+        -webkit-transform: translateY(3rem);
+        -moz-transform: translateY(3rem);
+        -ms-transform: translateY(3rem);
+        -o-transform: translateY(3rem);
 }
 
     100% {
@@ -246,7 +258,18 @@ body {
     }
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out .5s backwards;
     -webkit-animation: moveInBottom .5s ease-out .5s backwards;
+}
+
+p {
+    font-size: 2rem;
+    background-color: lightcoral;
+}
+
+span {
+    padding-left: 50px;
+    padding-top: 30px;
+
 }
