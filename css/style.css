@@ -154,12 +154,11 @@ body {
 
 .btn:active {
   transform: translateY(-0.1rem);
-  -webkit-transform:;
-  -moz-transform:;
-  -ms-transform:;
-  -o-transform:;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
+  -webkit-transform: translateY(-0.1rem);
+  -moz-transform: translateY(-0.1rem);
+  -ms-transform: translateY(-0.1rem);
+  -o-transform: translateY(-0.1rem);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 .btn::after {
   content: "";

@@ -199,12 +199,11 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   display: inline-block;
-  padding: 1.5rem 4rem;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 1.5rem 4rem;
   font-size: 1.6rem;
   border-radius: 10rem;
   -webkit-border-radius: 10rem;
@@ -229,6 +228,15 @@ body {
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  -webkit-transform: scaleX(1.4) scaleY(1.6);
+  -moz-transform: scaleX(1.4) scaleY(1.6);
+  -ms-transform: scaleX(1.4) scaleY(1.6);
+  -o-transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
 .btn:active {
   transform: translateY(-0.1rem);
   -webkit-transform: translateY(-0.1rem);
@@ -237,11 +245,6 @@ body {
   -o-transform: translateY(-0.1rem);
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
 }
 
 .btn::after {
@@ -265,17 +268,18 @@ body {
   -o-transition: all .4s;
 }
 
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
 .btn--white::after {
   background-color: #fff;
 }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-  -moz-transform: scaleX(1.4) scaleY(1.6);
-  -ms-transform: scaleX(1.4) scaleY(1.6);
-  -o-transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+.btn--animated {
+  animation: moveInBottom .5s ease-out .5s backwards;
+  -webkit-animation: moveInBottom .5s ease-out .5s backwards;
 }
 
 @-webkit-keyframes moveInBottom {
@@ -314,11 +318,6 @@ body {
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
   }
-}
-
-.btn--animated {
-  animation: moveInBottom .5s ease-out .5s backwards;
-  -webkit-animation: moveInBottom .5s ease-out .5s backwards;
 }
 
 p {
