@@ -117,6 +117,7 @@ body {
   letter-spacing: .2rem;
   font-weight: 700;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   transition: all, .2s;
@@ -131,6 +132,11 @@ body {
     -ms-transform: skewY(-2deg) skewX(-10deg) scale(1.1);
     -o-transform: skewY(-2deg) skewX(-10deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
 
 .u-center-text {
   text-align: center; }
