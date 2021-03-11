@@ -2,6 +2,7 @@ $color-primary-light: #7ed56f;
 $color-primary: #55c57a;
 $color-primary-dark: #28b485;
 
+$color-grey-dark: #777;
 
 *,
 *::after,
@@ -14,15 +15,15 @@ $color-primary-dark: #28b485;
 html {
     /* 1rem = 10px. This logic makes it easy to convert all
     font-sizes to rem units.*/
-    font-size: 10px; 
-       
+    font-size: 10px;
+
     /* Default font-size of a brouser is 16px. 
     So, in order to keep the root font-sise equal to 10px
     in dependance of default browser settings,
     we calculate it in percentages: 10/16*100 = 62.5%.
     This approach will make it possible for a user to adjust
     default browser settings to his needs. */
-    font-size: 62.5%; 
+    font-size: 62.5%;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
     font-weight: 400;
     /* font-size: 1.6rem; */
     line-height: 1.7;
-    color: #777;
+    color: $color-grey-dark;
     padding: 3rem;
     box-sizing: border-box;
 }
@@ -78,7 +79,7 @@ body {
     margin-bottom: 6rem;
     color: #fff;
     text-transform: uppercase;
-    
+
     /*fix unwanted element shaking during animation*/
     backface-visibility: hidden;
 }
@@ -109,7 +110,7 @@ body {
         -moz-transform: translateX(-10rem);
         -ms-transform: translateX(-10rem);
         -o-transform: translateX(-10rem);
-}
+    }
 
     80% {
         transform: translateX(1rem);
@@ -117,7 +118,7 @@ body {
         -moz-transform: translateX(1rem);
         -ms-transform: translateX(1rem);
         -o-transform: translateX(1rem);
-}
+    }
 
     100% {
         opacity: 1;
@@ -137,7 +138,7 @@ body {
         -moz-transform: translateX(10rem);
         -ms-transform: translateX(10rem);
         -o-transform: translateX(10rem);
-}
+    }
 
     80% {
         transform: translateX(-1rem);
@@ -145,7 +146,7 @@ body {
         -moz-transform: translateX(-1rem);
         -ms-transform: translateX(-1rem);
         -o-transform: translateX(-1rem);
-}
+    }
 
     100% {
         opacity: 1;
@@ -197,7 +198,7 @@ body {
 
 .btn--white {
     background-color: #fff;
-    color: #777;
+    color: $color-grey-dark;
 }
 
 .btn::after {
@@ -242,7 +243,7 @@ body {
         -moz-transform: translateY(3rem);
         -ms-transform: translateY(3rem);
         -o-transform: translateY(3rem);
-}
+    }
 
     100% {
         opacity: 1;
