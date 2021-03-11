@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+// DEFENITION OF 1rem
+html {
+    /* 1rem = 10px. This logic makes it easy to convert all
+    font-sizes to rem units.*/
+    font-size: 10px;
+
+    /* Default font-size of a brouser is 16px. 
+    So, in order to keep the root font-sise equal to 10px
+    in dependance of default browser settings,
+    we calculate it in percentages: 10/16*100 = 62.5%.
+    This approach will make it possible for a user to adjust
+    default browser settings to his needs. */
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
