@@ -110,9 +110,30 @@ body {
     -webkit-animation: moveInLeft 1s ease-out; }
 
 .heading-secondary {
+  display: inline-block;
   font-size: 3.5rem;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(-2deg) skewX(-15deg) scale(1.05);
+    -webkit-transform: skewY(-2deg) skewX(-15deg) scale(1.05);
+    -moz-transform: skewY(-2deg) skewX(-15deg) scale(1.05);
+    -ms-transform: skewY(-2deg) skewX(-15deg) scale(1.05);
+    -o-transform: skewY(-2deg) skewX(-15deg) scale(1.05);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
+
+.u-center-text {
+  text-align: center; }
 
 .btn:link, .btn:visited {
   display: inline-block;
