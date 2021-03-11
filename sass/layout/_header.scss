@@ -6,7 +6,7 @@
         url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
 
     &__logo-box {
@@ -14,7 +14,6 @@
         top: 4rem;
         left: 4rem;
     }
-    
     &__logo {
         height: 3.5rem;
     }
@@ -31,8 +30,3 @@
         -o-transform: translate(-50%, -50%);
     }
 }
-
-/* .header__logo:hover {
-    animation: moveInRight 1s ease-out;
-    -webkit-animation: moveInRight 1s ease-out;
-} */
