@@ -109,6 +109,11 @@ body {
     animation: moveInLeft 1 ease-out;
     -webkit-animation: moveInLeft 1s ease-out; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
@@ -211,12 +216,8 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  position: relative;
-  /* &__logo:hover {
-        animation: moveInRight 1s ease-out;
-        -webkit-animation: moveInRight 1s ease-out;
-    } */ }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -233,3 +234,8 @@ body {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }

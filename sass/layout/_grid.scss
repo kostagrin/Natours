@@ -8,7 +8,7 @@
 
     @include cleafix;
 
-
+    // Select all class elements beginning with "col-"
     [class^="col-"] {
         float: left;
 
