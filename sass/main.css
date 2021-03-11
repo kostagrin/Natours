@@ -222,6 +222,10 @@ body {
   text-align: center;
 }
 
+.u-margin-bottom-8 {
+  margin-bottom: 8rem;
+}
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
