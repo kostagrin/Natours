@@ -1,22 +1,23 @@
 .btn {
+
     &:link,
     &:visited {
-    display: inline-block;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    font-size: $default-font-size;
-    border-radius: 10rem;
-    -webkit-border-radius: 10rem;
-    -moz-border-radius: 10rem;
-    -ms-border-radius: 10rem;
-    -o-border-radius: 10rem;
-    transition: all .2s;
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    -ms-transition: all .2s;
-    -o-transition: all .2s;
-    position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        font-size: $default-font-size;
+        border-radius: 10rem;
+        -webkit-border-radius: 10rem;
+        -moz-border-radius: 10rem;
+        -ms-border-radius: 10rem;
+        -o-border-radius: 10rem;
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+        position: relative;
     }
 
     &:hover {
@@ -75,7 +76,7 @@
             background-color: #fff;
         }
     }
-    
+
     &--animated {
         animation: moveInBottom .5s ease-out .5s backwards;
         -webkit-animation: moveInBottom .5s ease-out .5s backwards;
@@ -83,6 +84,7 @@
 }
 
 .btn-text {
+
     &:link,
     &:visited {
         display: inline-block;
@@ -96,7 +98,7 @@
         -moz-transition: all .2s;
         -ms-transition: all .2s;
         -o-transition: all .2s;
-}
+    }
 
     &:hover {
         color: #fff;
@@ -107,7 +109,7 @@
         -moz-transform: translateY(-2px);
         -ms-transform: translateY(-2px);
         -o-transform: translateY(-2px);
-}
+    }
 
     &:active {
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
@@ -116,5 +118,5 @@
         -moz-transform: translateY(0);
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
-}
+    }
 }
