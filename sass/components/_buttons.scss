@@ -77,6 +77,15 @@
         }
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: #fff;
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
     &--animated {
         animation: moveInBottom .5s ease-out .5s backwards;
         -webkit-animation: moveInBottom .5s ease-out .5s backwards;
@@ -119,4 +128,6 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
+
+    
 }
