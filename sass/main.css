@@ -587,9 +587,36 @@ body {
   clip-path: circle(50% at 50% 50%);
   -webkit-clip-path: circle(50% at 50% 50%);
   transform: translateX(-3rem) skewX(12deg);
+  position: relative;
 }
 .story__img {
   height: 100%;
+  transform: translateX(-3rem) scale(1.2);
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.story:hover .story__img {
+  transform: translateX(-3rem) scale(1);
+  filter: blur(1px) brightness(80%);
+}
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.story:hover .story__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
 }
 .story__text {
   transform: skewX(12deg);
