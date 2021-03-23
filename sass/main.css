@@ -585,20 +585,40 @@ body {
 }
 
 .story {
+<<<<<<< HEAD
+  font-size: 1.6rem;
+  background-color: #fff;
+=======
+>>>>>>> re-style-story-section
   width: 75%;
   margin: 0 auto;
   padding: 6rem;
   padding-left: 9rem;
+<<<<<<< HEAD
+  border-radius: 3px;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+=======
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   font-size: 1.6rem;
+>>>>>>> re-style-story-section
   transform: skewX(-12deg);
 }
 .story__shape {
   width: 15rem;
   height: 15rem;
   float: left;
+<<<<<<< HEAD
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50%);
+  transform: translateX(-3rem) skewX(12deg);
+}
+.story__img {
+  height: 100%;
+=======
   shape-outside: circle(50% at 50% 50%);
   -webkit-shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
@@ -635,6 +655,7 @@ body {
 .story:hover .story__caption {
   opacity: 1;
   transform: translate(-50%, -50%);
+>>>>>>> re-style-story-section
 }
 .story__text {
   transform: skewX(12deg);
@@ -739,6 +760,10 @@ body {
 
 .section-stories {
   padding: 15rem 0;
+<<<<<<< HEAD
+  background-color: #f7f7f7;
+=======
   font-size: 1.6rem;
   position: relative;
+>>>>>>> re-style-story-section
 }/*# sourceMappingURL=main.css.map */
