@@ -466,7 +466,8 @@ body {
     clip-path: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
   .story__img {
     height: 100%;
     transform: translateX(-3rem) scale(1.2);
