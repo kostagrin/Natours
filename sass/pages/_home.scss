@@ -17,7 +17,7 @@
     -o-transform: skewY(-7deg);
 
     // Direct chile selector. Celecting DIRECT children of the parent element ("row" in this case) and scewing them back.
-    &>* {
+    & > * {
         transform: skewY(7deg);
         -webkit-transform: skewY(7deg);
         -moz-transform: skewY(7deg);
@@ -32,9 +32,22 @@
     margin-top: -11.5rem;   
 }
 
-
 .section-stories {
     padding: 15rem 0;
     font-size: 1.6rem;
     position: relative;
+}
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
+}
+
+.book {
+    background-image: url(../img/nat-10.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
+    // width: 75%;
+    height: 50rem;
 }
