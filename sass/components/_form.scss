@@ -37,5 +37,13 @@
         font-size: 1.2rem;
         font-weight: 700;
         font-family: inherit;
+        transition: all .3s;
+    }
+    
+    // Adjasent selector "+". Selects the first sibling element: AFTER "input" comes "label", so it will be selected.
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
     }
 }
