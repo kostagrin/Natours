@@ -1,5 +1,5 @@
 .btn {
-
+    &,
     &:link,
     &:visited {
         display: inline-block;
@@ -18,6 +18,10 @@
         -ms-transition: all .2s;
         -o-transition: all .2s;
         position: relative;
+
+        // Change fot the <button> element
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
@@ -38,7 +42,9 @@
         }
     }
 
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-.1rem);
         -webkit-transform: translateY(-.1rem);
         -moz-transform: translateY(-.1rem);
