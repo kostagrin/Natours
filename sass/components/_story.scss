@@ -26,12 +26,14 @@
         height: 100%;
         transform: translateX(-3rem) scale(1.2);
         transition: all .5s;
-        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
     }
 
     &:hover &__img {
         transform: translateX(-3rem) scale(1);
-        filter: blur(1px) brightness(80%);
+        -webkit-filter: blur(1px) brightness(80%);
+                filter: blur(1px) brightness(80%);
     }
     
     &__caption {
@@ -46,7 +48,8 @@
         color: #fff;
         opacity: 0;
         transition: all .5s;
-        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
     }
     
     &:hover &__caption {

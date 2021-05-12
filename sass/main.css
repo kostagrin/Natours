@@ -174,7 +174,7 @@ body {
   text-transform: uppercase;
   /*fix unwanted element shaking during animation*/
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .heading-primary--main {
   display: block;
@@ -728,6 +728,55 @@ body {
   opacity: 1;
 }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.9);
+  z-index: 5;
+}
+.popup__content {
+  width: 75%;
+  display: table;
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup__left {
+  width: 33.33333%;
+  display: table-cell;
+}
+.popup__right {
+  width: 66.66666%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3rem 5rem;
+}
+.popup__img {
+  display: block;
+  width: 100%;
+}
+.popup__text {
+  margin-bottom: 4rem;
+  font-size: 1.4rem;
+  -moz-column-count: 2;
+  column-count: 2;
+  -moz-column-gap: 4rem;
+  column-gap: 4rem;
+  -moz-column-rule: 1px solid #eee;
+  column-rule: 1px solid #eee;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -756,7 +805,7 @@ body {
   transform: translateX(-3rem) scale(1.2);
   transition: all 0.5s;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .story:hover .story__img {
   transform: translateX(-3rem) scale(1);
@@ -775,7 +824,7 @@ body {
   opacity: 0;
   transition: all 0.5s;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .story:hover .story__caption {
   opacity: 1;

@@ -13,7 +13,8 @@ body {
     text-transform: uppercase;
 
     /*fix unwanted element shaking during animation*/
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 
     &--main {
         display: block;
