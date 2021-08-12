@@ -633,7 +633,24 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(51, 51, 51, 0.9);
-  z-index: 5; }
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__close:link, .popup__close:visited {
+    display: inline-block;
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    line-height: 1;
+    text-decoration: none;
+    color: #777;
+    transition: all 2s; }
+  .popup__close:hover {
+    color: #55c57a; }
   .popup__content {
     width: 75%;
     display: table;
