@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css/icon-fonts.css">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="sass/main.css"> 
+    <link rel="stylesheet" href="sass/main.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
     <title>Natours | Exciting tours for adventurous people</title>
@@ -25,11 +25,13 @@
         <div class="navigation__background">&nbsp;</div>
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>1</span>About Natours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>2</span>Your benefits</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>3</span>Popular tours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>4</span>Stories</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>5</span>Book now</a></li>
+                <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>1</span>About Natours</a>
+                </li>
+                <li class="navigation__item"><a href="#section-features" class="navigation__link"><span>2</span>Your
+                        benefits</a></li>
+                <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>3</span>Popular tours</a></li>
+                <li class="navigation__item"><a href="#section-stories" class="navigation__link"><span>4</span>Stories</a></li>
+                <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>5</span>Book now</a></li>
             </ul>
         </nav>
     </div>
@@ -48,7 +50,7 @@
     </header>
 
     <main>
-        <section class="section-about">
+        <section class="section-about" id="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
             </div>
@@ -74,7 +76,7 @@
             </div>
         </section>
 
-        <section class="section-features">
+        <section class="section-features" id="section-features">
             <div class="row">
                 <div class="col-1-of-4">
                     <div class="feature-box">
@@ -231,7 +233,7 @@
             </div>
         </section>
 
-        <section class="section-stories">
+        <section class="section-stories" id="section-stories">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="img/video.mp4" type="video/mp4">
@@ -277,7 +279,7 @@
             </div>
         </section>
 
-        <section class="section-book">
+        <section class="section-book" id="section-book">
             <div class="row">
                 <div class="book">
                     <div class="book__form">
@@ -368,72 +370,90 @@
         </div>
     </div>
     </div>
-    <!-- <section class="grid-test">
-                            <div class="row">
-                                <div class="col-1-of-2">
-                                    col-1-of-2
-                                </div>
-                                <div class="col-1-of-2">
-                                    col-1-of-2
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-1-of-3">
-                                    col-1-of-3
-                                </div>
-                                <div class="col-1-of-3">
-                                    col-1-of-3
-                                </div>
-                                <div class="col-1-of-3">
-                                    col-1-of-3
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-1-of-3">
-                                    col-1-of-3
-                                </div>
-                                <div class="col-2-of-3">
-                                    col-2-of-3
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-1-of-4">
-                                    col-1-of-4
-                                </div>
-                                <div class="col-1-of-4">
-                                    col-1-of-4
-                                </div>
-                                <div class="col-1-of-4">
-                                    col-1-of-4
-                                </div>
-                                <div class="col-1-of-4">
-                                    col-1-of-4
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-1-of-4">
-                                    col-1-of-4
-                                </div>
-                                <div class="col-1-of-4">
-                                    col-2-of-4
-                                </div>
-                                <div class="col-2-of-4">
-                                    col-2-of-4
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-1-of-4">
-                                    col-1-of-4
-                                </div>
-                                <div class="col-3-of-4">
-                                    col-3-of-4
-                                </div>
-                            </div>
-        </section> -->
-
+    
+    <script>
+        var navClose = (function () {
+            
+            //Create a HTML collection of links
+            var navigationItem = document.body.getElementsByClassName('navigation__link');
+            
+            //Convert the HTML collection to an Array
+            var navigationItemArr = Array.prototype.slice.call(navigationItem);
+            
+            //Loop through each list item to make checked styling disappear upon click
+            navigationItemArr.forEach(function (current) {
+                current.addEventListener('click', function () {
+                    document.getElementById('navi-toggle').checked = false;
+                })
+            });
+            
+        })();
+        </script>
 </body>
 
 </html>
+<!-- <section class="grid-test">
+                        <div class="row">
+                            <div class="col-1-of-2">
+                                col-1-of-2
+                            </div>
+                            <div class="col-1-of-2">
+                                col-1-of-2
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-1-of-3">
+                                col-1-of-3
+                            </div>
+                            <div class="col-1-of-3">
+                                col-1-of-3
+                            </div>
+                            <div class="col-1-of-3">
+                                col-1-of-3
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-1-of-3">
+                                col-1-of-3
+                            </div>
+                            <div class="col-2-of-3">
+                                col-2-of-3
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-1-of-4">
+                                col-1-of-4
+                            </div>
+                            <div class="col-1-of-4">
+                                col-1-of-4
+                            </div>
+                            <div class="col-1-of-4">
+                                col-1-of-4
+                            </div>
+                            <div class="col-1-of-4">
+                                col-1-of-4
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1-of-4">
+                                col-1-of-4
+                            </div>
+                            <div class="col-1-of-4">
+                                col-2-of-4
+                            </div>
+                            <div class="col-2-of-4">
+                                col-2-of-4
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1-of-4">
+                                col-1-of-4
+                            </div>
+                            <div class="col-3-of-4">
+                                col-3-of-4
+                            </div>
+                        </div>
+    </section> -->
