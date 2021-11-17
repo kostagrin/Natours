@@ -15,6 +15,10 @@
     -moz-transition: transform .3s;
     -ms-transition: transform .3s;
     -o-transition: transform .3s;
+
+    @include respond(tablet-portraite) {
+        padding: 2rem;
+    }
     
     &__icon {
         display: inline-block;

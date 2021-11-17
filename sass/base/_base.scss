@@ -14,13 +14,40 @@ html {
 
     /* Default font-size of a brouser is 16px. 
     So, in order to keep the root font-sise equal to 10px
-    in dependance of default browser settings,
-    we calculate it in percentages: 10/16*100 = 62.5%.
+    independant of default browser settings,
+    we calculate it in percentages: 10/16*100 = 62.5% and set it.
     This approach will make it possible for a user to adjust
     default browser settings to his needs. */
+
+    // 1em = 16px
+
     font-size: 62.5%;
+    
+    
+    @include respond(tablet-landscape) {
+        font-size: 56.25%;  //1rem = 9px; 9/16 = 56.25%
+    }
+    
+    @include respond(tablet-portraite) {
+        font-size: 50%; //1rem = 8px; 8/16 = 50%
+    }
+    
+    @include respond(phone) {
+        font-size: 43.75%; //1rem = 7px; 6/16 = 43.75%
+    }
+    
+    @include respond(big-desctop) {
+        font-size: 75%; //1rem = 12px; 12/16 = 75%
+    }
 }
+
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tablet-portraite) {
+        padding: 0;
+    }
 }
+

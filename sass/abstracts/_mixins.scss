@@ -12,3 +12,43 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin pos_center_respond {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);  
+}
+
+// Media quety manager
+
+/* Break points:
+0       -  600px:    phone
+600px   -  900px:    tablet-portraite
+900px   - 1200px:    tablet-landscape
+1200px  - 1800px:    normal state where original styles apply
+1800px        + :    big-desctop
+*/
+
+
+// 1em = 16px
+
+@mixin respond($breakpoint) {
+    
+    
+    @if $breakpoint == tablet-landscape {
+        @media (max-width: 75em) { @content }; //width <= 1200px?
+    }
+    
+    @if $breakpoint == tablet-portraite {
+        @media (max-width: 56.25em) { @content }; //width <= 900px?
+    }
+    
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; //width <= 600px?
+    }
+
+    @if $breakpoint == big-desctop {
+        @media (min-width: 112.5em) { @content }; //width >=1800px
+    }
+}
