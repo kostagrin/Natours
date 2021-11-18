@@ -23,7 +23,8 @@
 // Media quety manager
 
 /* Break points:
-0       -  600px:    phone
+0       -  300px:    small-phone
+300px   -  600px:    phone
 600px   -  900px:    tablet-portraite
 900px   - 1200px:    tablet-landscape
 1200px  - 1800px:    normal state where original styles apply
@@ -46,6 +47,10 @@
     
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content }; //width <= 600px?
+    }
+
+    @if $breakpoint == small-phone {
+        @media screen and (max-width: 18.75em) { @content }; // width <= 300px?
     }
 
     @if $breakpoint == big-desctop {
