@@ -9,6 +9,20 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
     
+    @include respond(tablet-portraite) {
+        width: 125%;
+        position: relative;
+        right: 7rem;
+        padding: 2rem 2rem 4rem 6rem;
+        font-size: 1.5rem;
+    }
+    
+    @include respond(phone) {
+        width: 100%;
+        right: 0;
+        transform: skewX(0);
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -17,20 +31,22 @@
         -webkit-shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50%);
         -webkit-clip-path: circle(50%);
-        transform: translateX(-3rem) skewX(12deg);  
+        transform: translateX(-3rem) skewX(12deg);
         position: relative;
         overflow: hidden;
-        
+
         @include respond(tablet-landscape) {
             width: 15.5rem;
             height: 15.5rem;
-            
         }
 
         @include respond(tablet-portraite) {
-            width: 15rem;
-            height: 15rem;
-            
+            width: 12rem;
+            height: 12rem;
+        }
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
         }
     }
     
@@ -39,15 +55,26 @@
         transform: translateX(-3rem) scale(1.2);
         transition: all .5s;
         -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
+        backface-visibility: hidden;
+        
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0) scale(1.2);
+            // transition: all 0s;
+        }
     }
 
     &:hover &__img {
         transform: translateX(-3rem) scale(1);
         -webkit-filter: blur(1px) brightness(80%);
-                filter: blur(1px) brightness(80%);
+        filter: blur(1px) brightness(80%);
+        
+        @include respond(tablet-portraite) {
+            transform: translateX(-3rem) scale(1.2);
+            -webkit-filter: none;
+            filter: none;
+        }
     }
-    
+
     &__caption {
         // position: absolute;
         // top: 50%;
@@ -61,16 +88,28 @@
         opacity: 0;
         transition: all .5s;
         -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        @include respond(tablet-portraite) {
+            opacity: 1;
+            font-size: 1.3rem;
+        }
     }
     
     &:hover &__caption {
         opacity: 1;
         transform: translate(-50%, -50%);
         
+        @include respond(tablet-portraite) {
+            transform: translate(-50%, 20%);
+        }
     }
-    
-    &__text {       
-        transform: skewX(12deg);
+
+    &__text {
+        transform: skewX(12deg); 
+        
+        @include respond(phone) {
+            transform: skewX(0);          
+        }
     }
 }
