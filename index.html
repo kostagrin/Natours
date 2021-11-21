@@ -25,13 +25,17 @@
         <div class="navigation__background">&nbsp;</div>
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>1</span>About Natours</a>
+                <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>1</span>About
+                        Natours</a>
                 </li>
                 <li class="navigation__item"><a href="#section-features" class="navigation__link"><span>2</span>Your
                         benefits</a></li>
-                <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>3</span>Popular tours</a></li>
-                <li class="navigation__item"><a href="#section-stories" class="navigation__link"><span>4</span>Stories</a></li>
-                <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>5</span>Book now</a></li>
+                <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>3</span>Popular
+                        tours</a></li>
+                <li class="navigation__item"><a href="#section-stories"
+                        class="navigation__link"><span>4</span>Stories</a></li>
+                <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>5</span>Book now</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -68,9 +72,21 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" sizes="(max-width: 1200px) 22vw,
+                        (max-width: 900px) 14vw, (max-width: 600px) 18vw, (min-width: 1800px) 20vw, 
+                        350px" src="img/nat-1.jpg" class="composition__photo composition__photo--p1" alt="Photo 1">
+
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" sizes="(max-width: 1200px) 22vw,
+                        (max-width: 900px) 14vw, (max-width: 600px) 18vw, (min-width: 1800px) 20vw, 
+                        350px" src="img/nat-2.jpg" class="composition__photo composition__photo--p2" alt="Photo 2">
+
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" sizes="(max-width: 1200px) 22vw,
+                        (max-width: 900px) 14vw, (max-width: 600px) 18vw, (min-width: 1800px) 20vw, 
+                        350px" src="img/nat-3.jpg" class="composition__photo composition__photo--p3" alt="Photo 3">
+
+                        <!-- <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                     </div>
                 </div>
             </div>
@@ -90,7 +106,7 @@
                 <div class="col-1-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon icon-basic-compass"></i>
-                        <h3 class="heading-tretuary u-margin-bottom-small">Meat nature</h3>
+                        <h3 class="heading-tretuary u-margin-bottom-small">Meet nature</h3>
                         <p class="feature-box__text">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque?
                         </p>
@@ -269,7 +285,9 @@
                         <h3 class="heading-tertiary u-margin-bottom-small">
                             My life is completely different now
                         </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo optio architecto quasi aliquam commodi earum rerum ratione iste deleniti numquam iusto, nobis ullam perspiciatis ut velit inventore aut repellat veniam.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo optio architecto quasi aliquam
+                            commodi earum rerum ratione iste deleniti numquam iusto, nobis ullam perspiciatis ut velit
+                            inventore aut repellat veniam.</p>
                     </div>
                 </div>
             </div>
@@ -324,8 +342,9 @@
         <div class="footer__logo-box">
 
             <picture class="footer__logo">
-                <source srcset="/img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
-                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png logo-green-2x" alt="Full logo">
+                <source srcset="/img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png logo-green-2x" src="img/logo-green-1x.png" alt="Full logo">
             </picture>
         </div>
         <div class="row">
@@ -373,25 +392,25 @@
         </div>
     </div>
     </div>
-    
+
     <script>
         var navClose = (function () {
-            
+
             //Create a HTML collection of links
             var navigationItem = document.body.getElementsByClassName('navigation__link');
-            
+
             //Convert the HTML collection to an Array
             var navigationItemArr = Array.prototype.slice.call(navigationItem);
-            
+
             //Loop through each list item to make checked styling disappear upon click
             navigationItemArr.forEach(function (current) {
                 current.addEventListener('click', function () {
                     document.getElementById('navi-toggle').checked = false;
                 })
             });
-            
+
         })();
-        </script>
+    </script>
 </body>
 
 </html>
