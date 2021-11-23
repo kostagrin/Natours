@@ -4,90 +4,105 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba($color-grey-dark-3, .9);
+    background-color: rgba($color-grey-dark-3, .8);
     z-index: 5;
-    
+
     // initial state of the section
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
-    
-    
+
 
     &__content {
-        @include pos_center;
+        width: 75%;
         width: 87%;
-        background-color: #fff;
-        box-shadow: 0 2rem 4rem rgba(#000, .2);
-        border-radius: 3px;
         display: table;
+        @include pos_center;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 0 2rem 4rem rgba(#000, .2);
         overflow: hidden;
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
 
-        @include respond(phone) {
+        @include respond(tablet-portraite) {
             display: block;
         }
     }
-    
-    
-    &__left {
-        width: 33.33333%;
-        display: table-cell;
-        // height: auto;
-        // font-size: 0;
-        // margin-right: 10rem;
 
-        @include respond(phone) {
+
+    &__left {
+        width: 40%;
+        display: table-cell;
+        vertical-align: middle;
+
+        @include respond(tablet-portraite) {
             display: block;
             width: 100%;
-            height: 98%;
-            overflow: hidden;
+            height: auto;
+            font-size: 0;
+            @include cleafix;
         }
     }
     
     &__right {
-        width: 66.66667%;
+        width: 60%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
-        // margin: 10rem 5rem 15rem;
-
-        @include respond(phone) {
+        
+        @include respond(tablet-portraite) {
             display: block;
             width: 100%;
+            margin-bottom: 5rem;
         }
-    }
 
-    &__img {
-        display: block;
-        width: 100%;
-
-        @include respond(phone) {
-            display: inline-block;
-            width: 50%;
-            float: left;
+        @include respond(big-desctop) {
+                font-size: 1.4rem;
         }
     }
     
-    &__text {
-        margin-bottom: 4rem;
-        font-size: 1.4rem;
-        -moz-column-count: 2;
-             column-count: 2;
-        -moz-column-gap: 4rem;
-             column-gap: 4rem; //1em = 14px
-        -moz-column-rule: 1px solid $color-grey-light-2;
-             column-rule: 1px solid $color-grey-light-2;
-        -webkit-hyphens: auto;
+    &__img {
+        display: block; //displaing images as blocks removes gaps bneath them 
+        width: 100%;
+        height: auto;
+
+            @include respond(tablet-portraite) {
+                display: inherit;
+                font-size: 0;
+                float: left;
+                width: 50%;
+                height: 20%;
+            }
+        }
+        
+        &__text {
+            margin-bottom: 4rem;
+            // font-size: 1.4rem;
+            -moz-column-count: 2;
+            column-count: 2;
+            -moz-column-gap: 4rem;
+            column-gap: 4rem; //1em = 14px
+            -moz-column-rule: 1px solid $color-grey-light-2;
+            column-rule: 1px solid $color-grey-light-2;
+            -webkit-hyphens: auto;
             -ms-hyphens: auto;
-                hyphens: auto;
+            hyphens: auto;
+            
+            height: 38vh;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            @include respond(tablet-landscape) {
+                height: 21vh;
+            }
     }
 
     &__btn {
         font-size: 1.4rem !important;
         padding: 1rem 3rem !important;
+        float: right; //my personal setting
     }
 
 
@@ -98,7 +113,7 @@
         opacity: 1;
         visibility: visible;
     }
-    
+
     &:target &__content {
         opacity: 1;
         visibility: visible;
@@ -107,6 +122,7 @@
 
     // close button (x-button)
     &__close {
+
         &:link,
         &:visited {
             display: inline-block;
