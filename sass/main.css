@@ -1461,6 +1461,21 @@ body {
   -ms-transform: skewY(-7deg);
   -o-transform: skewY(-7deg);
 }
+@media (max-width: 75em) {
+  .section-features {
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4-min.jpg);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .section-features {
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  }
+}
+@media (max-width: 37.5em) {
+  .section-features {
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4-min.jpg);
+  }
+}
 .section-features > * {
   transform: skewY(7deg);
   -webkit-transform: skewY(7deg);

@@ -16,6 +16,18 @@
     background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/nat-4.jpg);
     background-size: cover;
     margin-top: -12rem;
+    
+    @include respond(tablet-landscape) {
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/nat-4-min.jpg);
+    }
+    
+    @media (min-resolution: 192dpi) {
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/nat-4.jpg);
+    }
+  
+    @include respond(phone) {
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/nat-4-min.jpg);
+    }
 
     transform: skewY(-7deg);
     -webkit-transform: skewY(-7deg);
@@ -23,7 +35,7 @@
     -ms-transform: skewY(-7deg); 
     -o-transform: skewY(-7deg);
 
-    // Direct chile selector. Celecting DIRECT children of the parent element ("row" in this case) and scewing them back.
+    // Direct child selector. Celecting DIRECT children of the parent element ("row" in this case) and scewing them back.
     &>* {
         transform: skewY(7deg);
         -webkit-transform: skewY(7deg);
