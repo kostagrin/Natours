@@ -4,14 +4,29 @@
     background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.8),
             rgba($color-primary-dark, 0.8)),
-        url(../img/hero-small.jpg);
+        url(../img/hero.jpg);
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em),
-            (min-width: 112.5em) {
+
+
+    @include respond(tablet-landscape) {
+        background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
+            url(../img/hero-small.jpg);
+    }
+
+    @media (min-resolution: 192dpi) {
         background-image: linear-gradient(to right bottom,
                 rgba($color-primary-light, 0.8),
                 rgba($color-primary-dark, 0.8)),
             url(../img/hero.jpg);
+    }
+
+    @include respond(phone) {
+        background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
+            url(../img/hero-small.jpg);
     }
 
     background-size: cover;
