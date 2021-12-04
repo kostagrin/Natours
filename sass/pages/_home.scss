@@ -21,7 +21,8 @@
         background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/nat-4-min.jpg);
     }
     
-    @media (min-resolution: 192dpi) {
+    @media (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/nat-4.jpg);
     }
   
@@ -88,12 +89,13 @@
         background-image: linear-gradient(105deg,
                 rgba(#fff, .9) 0%,
                 rgba(#fff, .9) 65%,
-                transparent 50%), url(../img/nat-10-min.jpg);
+                transparent 65%), url(../img/nat-10-min.jpg);
         height: 70rem;
         background-size: cover;
     }
-
-    @media (min-resolution: 192dpi) {
+    
+    @media (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(105deg,
             rgba(#fff, .9) 0%,
             rgba(#fff, .9) 50%,
