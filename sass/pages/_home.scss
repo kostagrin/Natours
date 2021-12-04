@@ -87,20 +87,20 @@
 
     @include respond(tablet-landscape) {
         background-image: linear-gradient(105deg,
-                rgba(#fff, .9) 0%,
-                rgba(#fff, .9) 65%,
-                transparent 65%), url(../img/nat-10-min.jpg);
-        height: 70rem;
-        background-size: cover;
+            rgba(#fff, .9) 0%,
+            rgba(#fff, .9) 65%,
+            transparent 65%), url(../img/nat-10-min.jpg);
     }
-    
-    @media (min-resolution: 192dpi),
+
+    @media (max-width: 75em) and (min-resolution: 192dpi),
     (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(105deg,
             rgba(#fff, .9) 0%,
-            rgba(#fff, .9) 50%,
-            transparent 50%), url(../img/nat-10.jpg);
-    }
+            rgba(#fff, .9) 65%,
+            transparent 65%), url(../img/nat-10.jpg);
+        }
+        
+
 
     @include respond(tablet-portraite) {
         background-image: linear-gradient(to right,
