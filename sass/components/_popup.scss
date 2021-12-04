@@ -12,6 +12,11 @@
     visibility: hidden;
     transition: all .3s;
 
+    @supports (-webkit-backdrop-filter: blur(0)) or (backdrop-filter: blur(0)) {
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        background-color: rgba($color-grey-dark-3, .5); // No special need for reducing opacity, just experimental.
+    }
 
     &__content {
         width: 75%;
@@ -45,13 +50,13 @@
             @include cleafix;
         }
     }
-    
+
     &__right {
         width: 60%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
-        
+
         @include respond(tablet-portraite) {
             display: block;
             width: 100%;
@@ -59,44 +64,44 @@
         }
 
         @include respond(big-desctop) {
-                font-size: 1.4rem;
+            font-size: 1.4rem;
         }
     }
-    
+
     &__img {
         display: block; //displaing images as blocks removes gaps bneath them 
         width: 100%;
         height: auto;
 
-            @include respond(tablet-portraite) {
-                display: inherit;
-                font-size: 0;
-                float: left;
-                width: 50%;
-                height: 20%;
-            }
+        @include respond(tablet-portraite) {
+            display: inherit;
+            font-size: 0;
+            float: left;
+            width: 50%;
+            height: 20%;
         }
-        
-        &__text {
-            margin-bottom: 4rem;
-            // font-size: 1.4rem;
-            -moz-column-count: 2;
-            column-count: 2;
-            -moz-column-gap: 4rem;
-            column-gap: 4rem; //1em = 14px
-            -moz-column-rule: 1px solid $color-grey-light-2;
-            column-rule: 1px solid $color-grey-light-2;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
-            hyphens: auto;
-            
-            height: 38vh;
-            overflow-x: hidden;
-            overflow-y: scroll;
+    }
 
-            @include respond(tablet-landscape) {
-                height: 21vh;
-            }
+    &__text {
+        margin-bottom: 4rem;
+        // font-size: 1.4rem;
+        -moz-column-count: 2;
+        column-count: 2;
+        -moz-column-gap: 4rem;
+        column-gap: 4rem; //1em = 14px
+        -moz-column-rule: 1px solid $color-grey-light-2;
+        column-rule: 1px solid $color-grey-light-2;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+
+        height: 38vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        @include respond(tablet-landscape) {
+            height: 21vh;
+        }
     }
 
     &__btn {
