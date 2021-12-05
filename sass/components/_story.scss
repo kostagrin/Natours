@@ -8,7 +8,7 @@
     border-radius: 3px;
     font-size: $default-font-size;
     transform: skewX(-12deg);
-    
+
     @include respond(tablet-portraite) {
         width: 125%;
         position: relative;
@@ -16,7 +16,7 @@
         padding: 2rem 2rem 4rem 6rem;
         font-size: 1.5rem;
     }
-    
+
     @include respond(phone) {
         width: 100%;
         right: 0;
@@ -27,13 +27,19 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50%);
-        -webkit-clip-path: circle(50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
         overflow: hidden;
+        border-radius: 50%; //* (Same as below with a star.)
+        
+        // * For old versions of Firefox which don't support clip-path and shape-outside.
+                @supports (clip-path: circle(50%)) or (-webkit-clip-path: circle(50%)) {
+            clip-path: circle(50%);
+            -webkit-clip-path: circle(50%);
+            shape-outside: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);    
+            border-radius: none;   
+        }
 
         @include respond(tablet-landscape) {
             width: 15.5rem;
@@ -49,14 +55,14 @@
             transform: translateX(-3rem) skewX(0);
         }
     }
-    
+
     &__img {
         height: 100%;
         transform: translateX(-3rem) scale(1.2);
         transition: all .5s;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        
+
         @include respond(phone) {
             transform: translateX(-3rem) skewX(0) scale(1.2);
             // transition: all 0s;
@@ -67,7 +73,7 @@
         transform: translateX(-3rem) scale(1);
         -webkit-filter: blur(1px) brightness(80%);
         filter: blur(1px) brightness(80%);
-        
+
         @include respond(tablet-portraite) {
             transform: translateX(-3rem) scale(1.2);
             -webkit-filter: none;
@@ -95,21 +101,21 @@
             font-size: 1.3rem;
         }
     }
-    
+
     &:hover &__caption {
         opacity: 1;
         transform: translate(-50%, -50%);
-        
+
         @include respond(tablet-portraite) {
             transform: translate(-50%, 20%);
         }
     }
 
     &__text {
-        transform: skewX(12deg); 
-        
+        transform: skewX(12deg);
+
         @include respond(phone) {
-            transform: skewX(0);          
+            transform: skewX(0);
         }
     }
 }
