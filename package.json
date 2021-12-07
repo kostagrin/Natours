@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    
     "compile:sass": "node-sass sass/main.scss css/style.comp.css"
   },
   "repository": {
@@ -16,14 +19,15 @@
     "BEM",
     "SASS"
   ],
-  "author": "kostagrin",
+  "author": "Konstantin Grinev",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kostagrin/Natours/issues"
   },
-  "homepage": "https://github.com/kostagrin/Natours#readme",
+  "homepage": "https://github.com/kostagrin/Natours#reaadme",
   "devDependencies": {
     "concat": "^1.0.3",
-    "node-sass": "^7.0.0"
+    "node-sass": "^7.0.0",
+    "npm-run-all": "^4.1.5"
   }
 }
