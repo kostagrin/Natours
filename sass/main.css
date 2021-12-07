@@ -1,6 +1,6 @@
 /* Break points:
-0       -  300px:    small-phone
-300px   -  600px:    phone
+0       -  360px:    small-phone
+360px   -  600px:    phone
 600px   -  900px:    tablet-portraite
 900px   - 1200px:    tablet-landscape
 1200px  - 1800px:    normal state where original styles apply
@@ -191,6 +191,16 @@ body {
   body {
     padding: 0;
   }
+}
+
+::-moz-selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+::selection {
+  background-color: #55c57a;
+  color: #fff;
 }
 
 body {
@@ -594,8 +604,8 @@ body {
   }
   .card__side--back {
     transform: rotateY(0);
-    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
   }
   .card:hover .card__side--front {
     transform: rotateY(0);
@@ -1301,6 +1311,12 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 83vh, 0 100%);
   }
 }
+@media screen and (max-width: 22.5em) {
+  .header {
+    clip-path: polygon(0 0, 100% 0, 100% 89vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 89vh, 0 100%);
+  }
+}
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -1467,6 +1483,12 @@ body {
     left: 32rem;
   }
 }
+@media screen and (max-width: 22.5em) {
+  .section-about__btn {
+    left: 25rem;
+    top: 15rem;
+  }
+}
 
 .section-features {
   padding: 20rem 0;
@@ -1504,6 +1526,11 @@ body {
 @media (max-width: 56.25em) {
   .section-features {
     padding: 10rem 0;
+  }
+}
+@media screen and (max-width: 22.5em) {
+  .section-features .feature-box {
+    margin: 0 5rem;
   }
 }
 
