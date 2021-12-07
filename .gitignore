@@ -1,4 +1,6 @@
 Notes.txt
 /node_modules
-sass/main.css.map
-/sass/main.css
+/sass/main.css.map
+*main.scss
+*.map
+package-lock.json
