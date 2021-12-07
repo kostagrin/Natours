@@ -2,13 +2,13 @@
     position: relative;
     height: 85vh;
     background-image: linear-gradient(to right bottom,
-    rgba($color-primary-light, 0.8),
-    rgba($color-primary-dark, 0.8)),
-    url(../img/hero.jpg);
-    
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+        url(../img/hero.jpg);
+
     background-size: cover;
     background-position: top;
-    
+
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -22,8 +22,8 @@
             url(../img/hero-small.jpg);
     }
 
-    @media (min-resolution: 192dpi),
-    (-webkit-min-device-pixel-ratio: 2) {
+    @media only screen and (min-resolution: 192dpi),
+    only screen and (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(to right bottom,
                 rgba($color-primary-light, 0.8),
                 rgba($color-primary-dark, 0.8)),

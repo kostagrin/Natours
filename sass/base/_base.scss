@@ -51,3 +51,7 @@ body {
     }
 }
 
+::selection {
+    background-color: $color-primary;
+    color: #fff;
+}
