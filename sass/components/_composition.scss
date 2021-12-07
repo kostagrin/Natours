@@ -43,6 +43,11 @@
                 top: 1rem;
                 right: 3rem;
             }
+
+            @include respond(phone) {
+                top: 0;
+                z-index: 1;
+            }
         }
 
         &--p3 {
@@ -52,6 +57,11 @@
             @include respond(tablet-portraite) {
                 top: 6rem;
                 left: -25rem;
+            }
+
+            @include respond(phone) {
+                top: 3rem;
+                left: -19rem;
             }
         }
 
